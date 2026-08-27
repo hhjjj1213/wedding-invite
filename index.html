@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>陈雨露 &amp; 常永江 · 婚礼邀请函</title>
+    <meta property="og:title" content="我们结婚啦 | 陈雨露 &amp; 常永江 婚礼邀请函">
+    <meta property="og:description" content="诚邀您见证我们的幸福时刻 · 2026.09.28 石家庄，期待您的到来">
+    <meta property="og:image" content="https://aka.doubaocdn.com/s/roaQWHkqzU">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+    <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
+    <style>
+        /* ===== 全局变量与重置 ===== */
+        :root {
+            --gold: #C9A96E;
+            --gold-light: #E5D4A8;
+            --gold-dark: #A88B4A;
+            --cream: #FAF6F0;
+            --cream-deep: #F3ECE0;
+            --wine: #8B3A4A;
+            --wine-light: #B8445C;
+            --text: #5C4A3A;
+            --text-light: #9B8B7A;
+            --white: #FFFFFF;
+            --shadow: rgba(92, 74, 58, 0.10);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .serif {
+            font-family: "Noto Serif SC", "Songti SC", "SimSun", serif;
+        }
+
+        .display {
+            font-family: "Cormorant Garamond", "Noto Serif SC", serif;
+        }
+
+        /* ===== 花瓣飘落 ===== */
+        .petals-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            top: -50px;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(ellipse at 30% 30%, #F5D5D0, #E8A5A0);
+            border-radius: 50% 0 50% 50%;
+            opacity: 0.6;
+            animation: petalFall linear infinite;
+        }
+
+        @keyframes petalFall {
+            0% {
+                transform: translateY(0) rotate(0deg) translateX(0);
+                opacity: 0;
+            }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
+            100% {
+                transform: translateY(100vh) rotate(720deg) translateX(60px);
+                opacity: 0;
+            }
+        }
+
+        /* ===== 音乐控件 ===== */
+        .music-control {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            z-index: 200;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .music-control.playing .music-icon {
+            animation: musicSpin 4s linear infinite;
+        }
+
+        .music-icon {
+            width: 18px;
+            height: 18px;
+            fill: var(--gold-dark);
+        }
+
+        @keyframes musicSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* ===== 通用 ===== */
+        .section {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== 装饰分隔线 ===== */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            margin: 0 auto;
+        }
+
+        .divider-line {
+            width: 36px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.45;
+        }
+
+        .divider-icon {
+            width: 14px;
+            height: 14px;
+            fill: var(--gold);
+        }
+
+        /* ===== 封面页（照片1） ===== */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.12) 0%,
+                rgba(0, 0, 0, 0.04) 35%,
+                rgba(0, 0, 0, 0.40) 100%
+            );
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: var(--white);
+            padding: 0 28px;
+        }
+
+        .hero-eyebrow {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 13px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-bottom: 18px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-title {
+            font-family: "Noto Serif SC", serif;
+            font-size: 40px;
+            font-weight: 300;
+            letter-spacing: 7px;
+            margin-bottom: 6px;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-subtitle {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 15px;
+            font-style: italic;
+            letter-spacing: 3px;
+            opacity: 0.85;
+            margin-bottom: 22px;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .hero-names {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 26px;
+            font-weight: 400;
+            font-style: italic;
+            letter-spacing: 2px;
+            margin: 20px 0;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-names .ampersand {
+            color: var(--gold-light);
+            margin: 0 10px;
+        }
+
+        .hero-date {
+            font-size: 13px;
+            letter-spacing: 3px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .hero-scroll-hint {
+            position: absolute;
+            bottom: 36px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: var(--white);
+            opacity: 0.75;
+            animation: bounce 2s ease infinite;
+        }
+
+        .hero-scroll-hint svg {
+            width: 22px;
+            height: 22px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-8px); }
+            60% { transform: translateX(-50%) translateY(-4px); }
+        }
+
+        /* ===== 文字引言区 ===== */
+        .intro {
+            padding: 80px 0 70px;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .intro-eyebrow {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 12px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 18px;
+        }
+
+        .intro-title {
+            font-family: "Noto Serif SC", serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 32px;
+            letter-spacing: 3px;
+        }
+
+        .intro-text {
+            font-family: "Noto Serif SC", serif;
+            font-size: 15px;
+            line-height: 2.1;
+            color: var(--text);
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .intro-text p {
+            margin-bottom: 16px;
+        }
+
+        .intro-quote {
+            font-family: "Cormorant Garamond", serif;
+            font-style: italic;
+            font-size: 17px;
+            color: var(--gold-dark);
+            margin-top: 28px;
+            letter-spacing: 1px;
+        }
+
+        /* ===== 单张大图 ===== */
+        .photo-full {
+            width: 100%;
+            display: block;
+        }
+
+        .photo-full img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== 双图并排 ===== */
+        .photo-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+            width: 100%;
+        }
+
+        .photo-pair img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            aspect-ratio: 3 / 4;
+        }
+
+        /* ===== 照片配文条 ===== */
+        .photo-caption {
+            background: var(--cream);
+            padding: 36px 20px;
+            text-align: center;
+        }
+
+        .photo-caption p {
+            font-family: "Noto Serif SC", serif;
+            font-size: 16px;
+            color: var(--text);
+            letter-spacing: 3px;
+            line-height: 1.8;
+        }
+
+        .photo-caption .en {
+            font-family: "Cormorant Garamond", serif;
+            font-style: italic;
+            font-size: 14px;
+            color: var(--gold-dark);
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        /* ===== 爱情宣言中段 ===== */
+        .vows-mid {
+            padding: 70px 0;
+            background: var(--cream-deep);
+            text-align: center;
+        }
+
+        .vows-mid-eyebrow {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 12px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 18px;
+        }
+
+        .vows-mid-title {
+            font-family: "Noto Serif SC", serif;
+            font-size: 22px;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 28px;
+            letter-spacing: 3px;
+        }
+
+        .vows-mid-text {
+            font-family: "Noto Serif SC", serif;
+            font-size: 15px;
+            line-height: 2.1;
+            color: var(--text);
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .vows-mid-text p {
+            margin-bottom: 14px;
+        }
+
+        /* ===== 婚礼信息 ===== */
+        .info {
+            padding: 80px 0 70px;
+            background: var(--cream);
+            text-align: center;
+        }
+
+        .info-eyebrow {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 12px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 18px;
+        }
+
+        .info-title {
+            font-family: "Noto Serif SC", serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--text);
+            margin-bottom: 40px;
+            letter-spacing: 3px;
+        }
+
+        .info-card {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 36px 28px;
+            box-shadow: 0 4px 20px var(--shadow);
+            max-width: 340px;
+            margin: 0 auto 28px;
+            position: relative;
+        }
+
+        .info-card::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid var(--gold-light);
+            border-radius: 6px;
+            pointer-events: none;
+        }
+
+        .info-row {
+            margin-bottom: 26px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 11px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold-dark);
+            margin-bottom: 8px;
+        }
+
+        .info-value {
+            font-family: "Noto Serif SC", serif;
+            font-size: 16px;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .info-value .highlight {
+            color: var(--wine);
+            font-weight: 500;
+        }
+
+        .info-calendar {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--cream-deep);
+            border-radius: 8px;
+            padding: 12px 18px;
+            margin-top: 10px;
+        }
+
+        .calendar-day .num {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--wine);
+            line-height: 1;
+        }
+
+        .calendar-day .month {
+            font-size: 10px;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .calendar-divider {
+            width: 1px;
+            height: 34px;
+            background: var(--gold-light);
+        }
+
+        .calendar-detail {
+            text-align: left;
+            font-size: 12px;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        /* ===== 倒计时 ===== */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 36px 0;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-num {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 32px;
+            font-weight: 500;
+            color: var(--wine);
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 10px;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            margin-top: 6px;
+        }
+
+        /* ===== 地图按钮 ===== */
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 28px;
+            background: var(--wine);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-family: "Noto Sans SC", sans-serif;
+        }
+
+        .map-btn:hover {
+            background: var(--wine-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(139, 58, 74, 0.25);
+        }
+
+        .map-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* ===== 结束页（照片14） ===== */
+        .ending {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .ending-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .ending-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.42);
+            z-index: 2;
+        }
+
+        .ending-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: var(--white);
+            padding: 0 28px;
+        }
+
+        .ending-title {
+            font-family: "Noto Serif SC", serif;
+            font-size: 30px;
+            font-weight: 300;
+            letter-spacing: 5px;
+            margin-bottom: 22px;
+        }
+
+        .ending-text {
+            font-family: "Noto Serif SC", serif;
+            font-size: 14px;
+            line-height: 2;
+            opacity: 0.9;
+            max-width: 280px;
+            margin: 0 auto 28px;
+        }
+
+        .ending-sign {
+            font-family: "Cormorant Garamond", serif;
+            font-style: italic;
+            font-size: 19px;
+            letter-spacing: 2px;
+            color: var(--gold-light);
+        }
+
+        .ending-footer {
+            position: absolute;
+            bottom: 28px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            z-index: 3;
+            color: var(--white);
+            opacity: 0.55;
+            font-size: 10px;
+            letter-spacing: 3px;
+        }
+
+        /* ===== 滚动渐入 ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== 灯箱 ===== */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            border: none;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 360px) {
+            .hero-title { font-size: 34px; }
+            .hero-names { font-size: 22px; }
+            .intro-title { font-size: 21px; }
+            .info-card { padding: 30px 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 花瓣飘落 -->
+<div class="petals-container" id="petalsContainer"></div>
+
+<!-- 音乐控件 -->
+<div class="music-control" id="musicControl">
+    <svg class="music-icon" viewBox="0 0 24 24">
+        <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+</div>
+<audio id="bgMusic" loop preload="auto">
+    <source src="https://aka.doubaocdn.com/s/tiJyC2wVIw" type="audio/mpeg">
+</audio>
+
+<!-- ============================================ -->
+<!-- 照片顺序按照上传顺序 1-14；已将第3张与第9张调换；倒数第二张已替换为新照片 -->
+<!-- ============================================ -->
+
+<!-- ===== 封面：照片1 ===== -->
+<section class="hero section">
+    <img class="hero-bg" src="https://aka.doubaocdn.com/s/roaQWHkqzU" alt="婚纱照">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-eyebrow display">Wedding Invitation</div>
+        <h1 class="hero-title serif">我们结婚啦</h1>
+        <div class="hero-subtitle display">We're Getting Married</div>
+        <div class="hero-names display">
+            陈雨露<span class="ampersand">&amp;</span>常永江
+        </div>
+        <div class="hero-date">2026.09.28 &nbsp;·&nbsp; 石家庄</div>
+    </div>
+    <div class="hero-scroll-hint">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+</section>
+
+<!-- ===== 引言文字 ===== -->
+<section class="intro section">
+    <div class="container reveal">
+        <div class="intro-eyebrow display">Our Promise</div>
+        <h2 class="intro-title serif">始于初见 &nbsp;止于终老</h2>
+        <div class="divider" style="margin-bottom: 32px;">
+            <span class="divider-line"></span>
+            <svg class="divider-icon" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span class="divider-line"></span>
+        </div>
+        <div class="intro-text serif">
+            <p>人生有两次幸运</p>
+            <p>一次遇见你，一次走到底</p>
+        </div>
+        <div class="intro-quote display">"Two lucks in life: to meet you, and to walk with you to the end."</div>
+    </div>
+</section>
+
+<!-- ===== 照片2：单张大图 ===== -->
+<div class="photo-full">
+    <img src="https://aka.doubaocdn.com/s/Cn2dyoffjv" alt="婚纱照" onclick="openLightbox(this.src)">
+</div>
+
+<!-- ===== 照片3、4：双图并排 ===== -->
+<div class="photo-pair">
+    <img src="https://aka.doubaocdn.com/s/DNcVutTHi1" alt="婚纱照" onclick="openLightbox(this.src)">
+    <img src="https://aka.doubaocdn.com/s/vjaq4rO6Eq" alt="婚纱照" onclick="openLightbox(this.src)">
+</div>
+
+<!-- ===== 配文条 ===== -->
+<div class="photo-caption">
+    <p>喜乐有分享 &nbsp;共度日月长</p>
+    <div class="en display">Share joy, share life</div>
+</div>
+
+<!-- ===== 照片5：单张大图 ===== -->
+<div class="photo-full">
+    <img src="https://aka.doubaocdn.com/s/yMXueW6NVI" alt="婚纱照" onclick="openLightbox(this.src)">
+</div>
+
+<!-- ===== 照片6、7：双图并排 ===== -->
+<div class="photo-pair">
+    <img src="https://aka.doubaocdn.com/s/ptWRebHwOE" alt="婚纱照" onclick="openLightbox(this.src)">
+    <img src="https://aka.doubaocdn.com/s/hLagdXXqNS" alt="婚纱照" onclick="openLightbox(this.src)">
+</div>
+
+<!-- ===== 中段爱情宣言 ===== -->
+<section class="vows-mid section">
+    <div class="container reveal">
+        <div class="vows-mid-eyebrow display">Our Vows</div>
+        <h2 class="vows-mid-title serif">执子之手 &nbsp;与子偕老</h2>
+        <div class="vows-mid-text serif">
+            <p>我们即将以夫妻的身份</p>
+            <p>开启人生新的篇章</p>
+            <p style="margin-top: 20px;">诚邀您前来见证我们的幸福时刻</p>
+            <p>盼与许久未见的亲友欢聚一堂</p>
+            <p>共享这份喜悦</p>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 照片8：单张大图 ===== -->
+<div class="photo-full">
+    <img src="https://aka.doubaocdn.com/s/mqrrmpVvDN" alt="婚纱照" onclick="openLightbox(this.src)">
+</div>
+
+<!-- ===== 照片9、10：双图并排 ===== -->
+<div class="photo-pair">
+    <img src="https://aka.doubaocdn.com/s/BW3vw9aXvZ" alt="婚纱照" onclick="openLightbox(this.src)">
+    <img src="https://aka.doubaocdn.com/s/wW5mnbnhCq" alt="婚纱照" onclick="openLightbox(this.src)">
+</div>
+
+<!-- ===== 配文条 ===== -->
+<div class="photo-caption">
+    <p>一朝喜定千年爱 &nbsp;百岁不移半寸心</p>
+    <div class="en display">A love that lasts a hundred years</div>
+</div>
+
+<!-- ===== 照片11：单张大图 ===== -->
+<div class="photo-full">
+    <img src="https://aka.doubaocdn.com/s/nTgaHzEihc" alt="婚纱照" onclick="openLightbox(this.src)">
+</div>
+
+<!-- ===== 照片12、13：双图并排 ===== -->
+<div class="photo-pair">
+    <img src="https://aka.doubaocdn.com/s/CrGSSDW75o" alt="婚纱照" onclick="openLightbox(this.src)">
+    <img src="https://aka.doubaocdn.com/s/Hm4IxuTUiV" alt="婚纱照" onclick="openLightbox(this.src)">
+</div>
+
+<!-- ===== 婚礼信息 ===== -->
+<section class="info section">
+    <div class="container reveal">
+        <div class="info-eyebrow display">Wedding Details</div>
+        <h2 class="info-title serif">婚礼信息</h2>
+
+        <div class="info-card">
+            <div class="info-row">
+                <div class="info-label display">Date</div>
+                <div class="info-value">
+                    <span class="highlight">2026年09月28日</span><br>
+                    农历八月十八 &nbsp;星期一
+                </div>
+                <div class="info-calendar">
+                    <div class="calendar-day">
+                        <div class="num display">28</div>
+                        <div class="month">SEPT</div>
+                    </div>
+                    <div class="calendar-divider"></div>
+                    <div class="calendar-detail">
+                        中午 12:00<br>
+                        恭候光临
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="info-label display">Venue</div>
+                <div class="info-value">
+                    <span class="highlight">石炼宾馆</span><br>
+                    河北省石家庄市藁城区丘头镇<br>
+                    循环化工园区工业大街72号
+                </div>
+            </div>
+        </div>
+
+        <!-- 倒计时 -->
+        <div class="countdown" id="countdown">
+            <div class="countdown-item">
+                <div class="countdown-num display" id="cdDays">--</div>
+                <div class="countdown-label">天</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-num display" id="cdHours">--</div>
+                <div class="countdown-label">时</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-num display" id="cdMins">--</div>
+                <div class="countdown-label">分</div>
+            </div>
+        </div>
+
+        <a class="map-btn" href="https://maps.google.com/?q=河北省石家庄市藁城区丘头镇循环化工园区工业大街72号石炼宾馆" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            查看地图导航
+        </a>
+    </div>
+</section>
+
+<!-- ===== 结束页：照片14 ===== -->
+<section class="ending section">
+    <img class="ending-bg" src="https://aka.doubaocdn.com/s/GOXQRMMDMf" alt="婚纱照">
+    <div class="ending-overlay"></div>
+    <div class="ending-content">
+        <h2 class="ending-title serif">静候您的到来</h2>
+        <p class="ending-text serif">
+            人生海海，感恩相遇<br>
+            感谢生命中有你们的陪伴与见证<br>
+            盼与你，共享这份喜悦
+        </p>
+        <div class="ending-sign display">Chen Yulu &amp; Chang Yongjiang</div>
+    </div>
+    <div class="ending-footer">2026.09.28 &nbsp;·&nbsp; 我们结婚啦</div>
+</section>
+
+<!-- ===== 灯箱 ===== -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <img id="lightboxImg" src="" alt="预览">
+</div>
+
+<script>
+    // ===== 花瓣飘落 =====
+    (function() {
+        var container = document.getElementById('petalsContainer');
+        for (var i = 0; i < 12; i++) {
+            var petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.left = Math.random() * 100 + '%';
+            petal.style.animationDuration = (9 + Math.random() * 9) + 's';
+            petal.style.animationDelay = (Math.random() * 10) + 's';
+            petal.style.width = (7 + Math.random() * 7) + 'px';
+            petal.style.height = petal.style.width;
+            petal.style.opacity = 0.35 + Math.random() * 0.35;
+            container.appendChild(petal);
+        }
+    })();
+
+    // ===== 音乐控制(微信兼容: 仅点击/触摸时启动, 失败自动重试) =====
+    (function() {
+        var musicControl = document.getElementById('musicControl');
+        var bgMusic = document.getElementById('bgMusic');
+        var isPlaying = false;
+        var started = false;
+
+        function tryPlay() {
+            if (!bgMusic) return;
+            var promise = bgMusic.play();
+            if (promise !== undefined) {
+                promise.then(function() {
+                    isPlaying = true;
+                    started = true;
+                    musicControl.classList.add('playing');
+                }).catch(function() {
+                    isPlaying = false;
+                });
+            }
+        }
+
+        // 微信要求真实用户手势(点击/触摸)才能播放; 滚动不触发
+        var userTouched = false;
+        function onGesture() {
+            userTouched = true;
+            if (!started) tryPlay();
+        }
+        document.addEventListener('click', onGesture);
+        document.addEventListener('touchstart', onGesture);
+
+        // 音频加载就绪后, 若用户已点过但还未成功播放, 自动补一次
+        bgMusic.addEventListener('canplay', function() {
+            if (!started && userTouched) {
+                tryPlay();
+            }
+        });
+
+        musicControl.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (isPlaying) {
+                bgMusic.pause();
+                isPlaying = false;
+                musicControl.classList.remove('playing');
+            } else {
+                tryPlay();
+            }
+        });
+    })();
+
+    // ===== 滚动渐入 =====
+    (function() {
+        var reveals = document.querySelectorAll('.reveal');
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function(el) { observer.observe(el); });
+    })();
+
+    // ===== 倒计时 =====
+    (function() {
+        var weddingDate = new Date('2026-09-28T12:00:00+08:00').getTime();
+        function updateCountdown() {
+            var now = new Date().getTime();
+            var distance = weddingDate - now;
+            if (distance < 0) {
+                document.getElementById('cdDays').textContent = '0';
+                document.getElementById('cdHours').textContent = '0';
+                document.getElementById('cdMins').textContent = '0';
+                return;
+            }
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('cdDays').textContent = days;
+            document.getElementById('cdHours').textContent = hours;
+            document.getElementById('cdMins').textContent = mins;
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+    })();
+
+    // ===== 灯箱 =====
+    function openLightbox(src) {
+        document.getElementById('lightboxImg').src = src;
+        document.getElementById('lightbox').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+    });
+</script>
+
+</body>
+</html>
